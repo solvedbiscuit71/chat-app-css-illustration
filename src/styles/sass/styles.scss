@@ -24,14 +24,14 @@ main::before {
   position: absolute;
   content: "";
   z-index: 4;
-  top: 0;
-  left: -50%;
+  top: -5em;
+  left: calc(-420px / 2);
 
   width: 420px;
   height: 70vh;
 
   background-image: linear-gradient(to top,hsl(264, 100%, 61%),hsl(279, 100%, 62%));
-  border-radius: 0em 0em 50% 50%;
+  border-radius: 0em 0em 15em 15em;
 }
 
 main {
@@ -39,6 +39,8 @@ main {
   z-index: 3;
 
   min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   background-color: hsl(270, 20%, 96%);
 
   display: grid;
@@ -51,14 +53,14 @@ main::after {
   position: absolute;
   content: "";
   z-index: 4;
-  bottom: 0;
-  right: -50%;
+  bottom: -5em;
+  right: calc(-420px / 2);
 
   width: 420px;
   height: 70vh;
 
   background-color: hsla(264, 71%, 72%, 0.068);
-  border-radius: 50% 50% 0em 0em;
+  border-radius: 15em 15em 0em 0em;
 }
 
 .hero {
@@ -77,5 +79,53 @@ main::after {
     text-align: center;
 
     margin: 0 2.25em;
+  }
+}
+
+/* desktop design */
+
+@media only screen and (min-width: 1200px) {
+  main::before {
+    width: 560px;
+    height: 90vh;
+
+    top: 0;
+    left: calc(-420px / 5);
+
+    background-image: linear-gradient(to top,hsl(264, 100%, 61%),hsl(282, 100%, 63%));
+    border-radius: 0em 0em 20em 20em;
+  }
+
+  main::after {
+    height: 80vh;
+
+    bottom: 0;
+    right: calc(-420px / 2.75);
+  }
+
+  main {
+    grid-template-columns: repeat(2,1fr);
+    gap: 7em;
+    align-items: center;
+    justify-items: right;
+  }
+
+  .phone {
+    margin: 0;
+  }
+
+  .hero {
+    h1 {
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+      text-align: left;
+
+      padding-right: 8em;
+    }
+
+    margin-right: 4.25em;
   }
 }

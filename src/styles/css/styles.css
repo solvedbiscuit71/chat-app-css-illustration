@@ -186,18 +186,20 @@ main::before {
   position: absolute;
   content: "";
   z-index: 4;
-  top: 0;
-  left: -50%;
+  top: -5em;
+  left: -210px;
   width: 420px;
   height: 70vh;
   background-image: linear-gradient(to top, #8838ff, #bb3dff);
-  border-radius: 0em 0em 50% 50%;
+  border-radius: 0em 0em 15em 15em;
 }
 
 main {
   position: relative;
   z-index: 3;
   min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   background-color: #f5f3f7;
   display: grid;
   gap: 4em;
@@ -208,12 +210,12 @@ main::after {
   position: absolute;
   content: "";
   z-index: 4;
-  bottom: 0;
-  right: -50%;
+  bottom: -5em;
+  right: -210px;
   width: 420px;
   height: 70vh;
   background-color: rgba(173, 133, 234, 0.068);
-  border-radius: 50% 50% 0em 0em;
+  border-radius: 15em 15em 0em 0em;
 }
 
 .hero {
@@ -230,4 +232,45 @@ main::after {
   font-size: 1.15rem;
   text-align: center;
   margin: 0 2.25em;
+}
+
+/* desktop design */
+@media only screen and (min-width: 1200px) {
+  main::before {
+    width: 560px;
+    height: 90vh;
+    top: 0;
+    left: -84px;
+    background-image: linear-gradient(to top, #8838ff, #c642ff);
+    border-radius: 0em 0em 20em 20em;
+  }
+
+  main::after {
+    height: 80vh;
+    bottom: 0;
+    right: -152.7272727273px;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7em;
+    align-items: center;
+    justify-items: right;
+  }
+
+  .phone {
+    margin: 0;
+  }
+
+  .hero {
+    margin-right: 4.25em;
+  }
+  .hero h1 {
+    text-align: left;
+  }
+  .hero p {
+    margin: 0;
+    text-align: left;
+    padding-right: 8em;
+  }
 }
