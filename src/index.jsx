@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
 
 ReactDOM.render(
-  <h1>Chat app illustration</h1>,
+  <App />,
   document.getElementById("root")
 );
