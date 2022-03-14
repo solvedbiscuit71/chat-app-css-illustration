@@ -14,7 +14,7 @@ function Phone(props) {
       </div>
 
       <div className="phone__main">
-        <div className="message-grid">
+        <div className="message-flex">
           <div className="message message--there">
             That sounds great. I'd be
             happy to discuss more.
@@ -42,7 +42,7 @@ function Phone(props) {
           </div>
           <div className="message message--there message--price">
             <div className="input">
-              <input type="checkbox" name="30min walk" id="30min" />
+              <span className="input-checkbox" id="30min"></span>
               <label htmlFor="30min">30 minutes walk</label>
             </div>
 
@@ -50,7 +50,7 @@ function Phone(props) {
           </div>
           <div className="message message--there message--price">
             <div className="input">
-              <input type="checkbox" name="1hr walk" id="1hr" />
+              <span className="input-checkbox" id="1hr"></span>
               <label htmlFor="1hr">1 hour walk</label>
             </div>
 

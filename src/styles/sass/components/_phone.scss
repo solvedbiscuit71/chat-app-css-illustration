@@ -1,0 +1,221 @@
+.phone::before {
+  content: "";
+  position: absolute;
+  top: -.625em;
+  left: calc(50% - 64px);
+
+  width: 128px;
+  height: 28px;
+
+  background-color: white;
+  border: none;
+  border-radius: 0 0 1em 1em;
+}
+
+.phone {
+  width: 248px;
+  height: 506px;
+
+  margin-inline: auto;
+  overflow: hidden;
+
+  border: .625em solid white;
+  border-radius: 2em;
+  box-shadow: 0px 0px 20px 10px hsla(0, 0%, 75%, 0.25);
+
+  position: relative;
+  z-index: 5;
+
+  &__header {
+    background-image: linear-gradient(to right,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-radius: 1em 1em .25em .25em;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 66px;
+    padding-top: 1em;
+
+    &__avatar {
+      display: grid;
+      grid-template-areas: 
+        "back avatar name"
+        "back avatar status";
+
+      align-items: center;
+      align-content: center;
+      gap: .25em .5em;
+
+      margin-inline: .5em;
+
+      svg {
+        grid-area: back;
+
+        width: .75em;
+        height: .75em;
+
+        fill: white;
+      }
+
+      img {
+        grid-area: avatar;
+
+        width: 1.75em;
+        height: 1.75em;
+
+        border: .1em solid white;
+        border-radius: 50%;
+      }
+
+      h2 {
+        grid-area: name;
+
+        margin: 0;
+        font-size: .75em;
+        font-weight: 500;
+        color: white;
+      }
+
+      p {
+        grid-area: status;
+
+        margin: 0;
+        font-size: .5em;
+        color: hsl(276, 100%, 81%);
+      }
+    }
+
+    &__menu-svg {
+      height: .625em;
+      fill: white;
+    }
+  }
+
+  &__main {
+    position: relative;
+    background-color: hsl(270, 20%, 96%);
+
+    height: calc(100% - 66px);
+
+    .message-flex {
+      display: flex;
+      flex-flow: column;
+      gap: .5em;
+
+      padding: .8em;
+    }
+
+    .message {
+      max-width: 60%;
+      font-size: .45rem;
+      padding: 1em;
+    }
+
+    .message--there {
+      color: hsl(276, 55%, 52%);
+      background-color: hsl(272, 41%, 93%);
+      
+      border-radius: 1em 1em 1em .5em;
+      align-self: flex-start;
+      box-shadow: 0px 3px 5px 1px rgba(190, 190, 190, 0.555);
+    }
+
+    .message--your:not(.message--photo) {
+      color: hsl(271, 15%, 43%);
+      background-color: hsl(180, 100%, 100%);
+      
+      border-radius: 1em 1em .5em 1em;
+      align-self: flex-end;
+      box-shadow: 0px 3px 5px 1px rgba(190, 190, 190, 0.555);
+    }
+
+    .message--your.message--photo {
+      max-width: unset;
+      width: fit-content;
+      padding: 0;
+
+      align-self: flex-end;
+      display: flex;
+      gap: .5em;
+
+      img {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 1em;
+      }
+    }
+
+    .message--there.message--price {
+      max-width: unset;
+      width: 160px;
+      padding: 1em;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background-image: linear-gradient(to left,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+      border-radius: 1.5em 1.5em 1.5em .5em;
+
+      .input {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+
+        .input-checkbox {
+          width: .75em;
+          height: .75em;
+
+          border: hsl(291, 100%, 75%) solid .1em;
+          border-radius: 50%;
+        }
+
+        label {
+          color: hsl(0, 0%, 87%); 
+          font-size: .5rem;
+        }
+      }
+
+      span {
+        color: white;
+
+        font-size: .85rem;
+        font-weight: 500;
+      }
+    }
+
+    .message-input {
+      position: absolute;
+      bottom: 1em;
+      left: .8em;
+
+      width: calc(100% - 1.6em);
+
+      input {
+        position: relative;
+
+        width: 100%;
+        padding: 1.25em 2.5em;
+
+        border: none;
+        border-radius: 2em;
+
+        font-size: .6rem;
+        color: hsl(206, 6%, 79%);
+      }
+
+      svg {
+        position: absolute;
+        top: .35em;
+        right: .5em;
+
+        width: 24px;
+        height: 24px;
+        fill: #3d2650;
+      }
+    }
+  }
+}
