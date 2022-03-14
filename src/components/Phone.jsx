@@ -42,16 +42,16 @@ function Phone(props) {
           </div>
           <div className="message message--there message--price">
             <div className="input">
-              <span className="input-checkbox" id="30min"></span>
-              <label htmlFor="30min">30 minutes walk</label>
+              <span className="input-checkbox"></span>
+              <p>30 minutes walk</p>
             </div>
 
             <span>$29</span>
           </div>
           <div className="message message--there message--price">
             <div className="input">
-              <span className="input-checkbox" id="1hr"></span>
-              <label htmlFor="1hr">1 hour walk</label>
+              <span className="input-checkbox"></span>
+              <p>1 hour walk</p>
             </div>
 
             <span>$49</span>

@@ -134,7 +134,7 @@
   border: #ec80ff solid 0.1em;
   border-radius: 50%;
 }
-.phone__main .message--there.message--price .input label {
+.phone__main .message--there.message--price .input p {
   color: #dedede;
   font-size: 0.5rem;
 }
